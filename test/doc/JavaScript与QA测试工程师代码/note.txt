@@ -1,0 +1,9 @@
+1.sudo npm install karma -g (集成化测试环境 集成浏览器 & 断言库)
+2.sudo npm install karma-cli -g
+3. sudo npm install karma-jasmine --save
+4.sudo npm install karma-phantomjs-launcher --save
+5.sudo npm install phantomjs --save
+6.karma start 执行
+7.npm install  karma-coverage --save-dev
+8.e2e测试 功能测试
+9.性能测试 页面性能 秒开率  node性能 代码的性能
