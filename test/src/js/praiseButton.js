@@ -1,17 +1,15 @@
  
 
 class PraiseButton {
-    constructor(clikeElName){
-        this.clikeEl = document.querySelector(`.${clikeElName}`)
-        this.count = 0
-        this.bindEvent();
+    constructor(count = 0){
+      
+        this.count = count
+       
     }
-    bindEvent(){
-        addEvent(this.clikeEl, 'click', this.clickHandle.bind(this), false);
-    }
-    clickHandle(){
+    
+    add(){
         this.count++ 
-        this.render()
+   
     }
 }
 

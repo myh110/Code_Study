@@ -8,17 +8,23 @@
   },
   "scripts": {
     "build": "babel src/js -d example/js",
-    "demo": "npm run build && serve example"
+    "demo": "npm run build && http-serve example"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-preset-env": "^1.6.1",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
     "babel-polyfill": "^6.26.0",
-    "systemjs": "^0.21.0",
-    "server": "^1.0.18"
+    "babel-preset-env": "^1.6.1",
+    "jasmine-core": "3.1.0",
+    "karma": "2.0.0",
+    "karma-babel-preprocessor": "^7.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "1.1.1",
+    "karma-phantomjs-launcher": "1.0.4",
+    "http-server": "^0.11.1",
+  
   }
 }
