@@ -21,10 +21,7 @@
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript">
        SystemJS.import('./js/index.js').then(function (m) {
-            $.fn.Thumb = function () {
-                return new m.default("count", "thumb");
-            };
-            $('#app').Thumb();
+             Thumb("thumb","count", 0);
         });
     </script>
 </body>
