@@ -1,4 +1,4 @@
-import Thumb from './thumb';
+import Thumb from './thumb.js';
 
 
 export default Thumb;

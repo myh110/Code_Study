@@ -13,16 +13,25 @@
     <div class="main">
         <div class="count"></div>
         <div class="thumb">
-           <div></div>
-           <div></div>
+            <div></div>
+            <div></div>
         </div>
     </div>
-    <script src="https://cdn.bootcss.com/systemjs/0.21.0/system-production.js"></script>
+    <script src="https://cdn.bootcss.com/systemjs/0.21.1/system.js"></script>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript">
-       SystemJS.import('./js/index.js').then(function (m) {
-             Thumb("thumb","count", 0);
+    <script type="text/javascript"> 
+        SystemJS.config({
+            baseURL: ' /js'
         });
+        SystemJS.import('index.js').then(function (m) {
+            $.extend({
+                thumb: m.default.Thumb
+            })
+            callBack();
+        });
+        function callBack() {
+           new $.thumb("thumb", "count", 0);
+        }
     </script>
 </body>
 
