@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _praiseButton = require("./praiseButton.js");
+var _praiseButton = require('./praiseButton.js');
 
 var _praiseButton2 = _interopRequireDefault(_praiseButton);
 
@@ -26,27 +26,32 @@ var Thumb = function (_PraiseButton) {
 
         var _this = _possibleConstructorReturn(this, (Thumb.__proto__ || Object.getPrototypeOf(Thumb)).call(this, count));
 
-        _this.clikeEl = document.querySelector("." + clikeElName);
-        _this.addEl = document.querySelector("." + addElName);
+        _this.clikeEl = document.querySelector('.' + clikeElName);
+        _this.addEl = document.querySelector('.' + addElName);
         _this.bindEvent();
         _this.render();
         return _this;
     }
 
     _createClass(Thumb, [{
-        key: "render",
+        key: 'render',
         value: function render() {
             this.addEl.innerHTML = this.count;
         }
     }, {
-        key: "bindEvent",
+        key: 'bindEvent',
         value: function bindEvent() {
 
             addEvent(this.clikeEl, 'click', this.handle.bind(this), false);
         }
     }, {
-        key: "handle",
+        key: 'handle',
         value: function handle() {
+            axios.get('/index/update').then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
             this.add();
             this.render();
         }

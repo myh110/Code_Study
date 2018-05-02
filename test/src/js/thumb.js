@@ -18,6 +18,13 @@ class Thumb extends PraiseButton {
         addEvent(this.clikeEl, 'click', this.handle.bind(this), false);
     }
     handle(){
+        axios.get('/index/update')
+            .then(function(response) {
+                console.log(response);
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
         this.add()
         this.render()
     }
