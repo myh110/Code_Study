@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/common.css">
-</head>
-
-<body>
+{% extends 'layout.html' %}
+{% block title %}My Page{% endblock %}
+{% block head %}
+{% parent %}
+<link rel="stylesheet" href="/css/common.css">
+<script src="https://cdn.bootcss.com/systemjs/0.21.1/system.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+{% endblock %}
+{% block content %}
     <div class="main">
         <div class="count"></div>
         <div class="thumb">
@@ -17,11 +14,10 @@
             <div></div>
         </div>
     </div>
-    <script src="https://cdn.bootcss.com/systemjs/0.21.1/system.js"></script>
-    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+
     <script type="text/javascript"> 
         SystemJS.config({
-            baseURL: ' /js'
+            baseURL: '/js'
         });
         SystemJS.import('index.js').then(function (m) {
             $.extend({
@@ -33,6 +29,4 @@
            new $.thumb("thumb", "count", 0);
         }
     </script>
-</body>
-
-</html>
+{% endblock %}
