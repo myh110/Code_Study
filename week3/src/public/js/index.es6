@@ -1,4 +1,4 @@
-import Thumb from './thumb.es6';
+// import Thumb from './thumb.js';
+import css from '../css/common.css'
 
-
-export default Thumb;
+// export default Thumb;

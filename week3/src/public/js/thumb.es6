@@ -2,22 +2,23 @@ import PraiseButton from "./praiseButton.es6"
 
 
 class Thumb extends PraiseButton {
-    constructor(clikeElName, addElName,count){
+    constructor(clikeElName, addElName,count = 0){
         super(count)
         this.clikeEl = document.querySelector(`.${clikeElName}`)
         this.addEl = document.querySelector(`.${addElName}`)
-        this.bindEvent();
-        this.render()
+        // this.bindEvent();
+        // this.render()
     }
 
     render(){
-        this.addEl.innerHTML = this.count;
+        // this.addEl.innerHTML = this.count;
+        alert(this.count)
     }
-    bindEvent(){
+    // bindEvent(){
     
-        addEvent(this.clikeEl, 'click', this.handle.bind(this), false);
-    }
-    handle(){
+    //     addEvent(this.clikeEl, 'click', this.handle.bind(this), false);
+    // }
+    clickAction(){
         axios.get('/index/update')
             .then(function(response) {
                 console.log(response);
@@ -54,4 +55,4 @@ const addEvent = (function() {
         }
     }
 })();
-export default {Thumb}
+export default Thumb

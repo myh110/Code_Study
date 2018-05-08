@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
-// var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var LiveReloadPlugin = require('webpack-livereload-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 // var DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
@@ -28,20 +29,35 @@ module.exports = {
                     }
                 }
             },
-            // {
-            //     test: /\.css$/,
-            //     use: ExtractTextPlugin.extract({
-            //         fallback: "style-loader",
-            //         use: "css-loader"
-            //     })
-            // }
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: "css-loader"
+                })
+            }
         ]
     },
     plugins: [
+        //DefinePlugin 配置全局变量
         new webpack.DefinePlugin({
             'process.env': {
-                NODE_ENV: '"prod"'
+                NODE_ENV: '"dev"'
             }
+        }),
+        //浏览器自动刷新 
+        new LiveReloadPlugin({
+            appendScriptTag: true
+        }),
+        //css提取
+        new ExtractTextPlugin({
+            filename: 'public/css/[name]-[hash:5].css',
+            allChunks: true,
+        }),
+        //通过将公共模块拆出来，最终合成的文件能够在最开始的时候加载一次，便存到缓存中供后续使用
+        new webpack.optimize.CommonsChunkPlugin({
+            name:'vendor',
+            filename: 'public/js/vendor-[hash:5].js',
         })
         // 构建优化插件
         // new webpack.optimize.CommonsChunkPlugin({
