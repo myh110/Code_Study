@@ -53,7 +53,7 @@ module.exports = {
         }),
         //css提取
         new ExtractTextPlugin({
-            filename: 'public/css/[name]-[hash:5].css',
+            filename: 'public/css/vendor-[hash:5].css',
             // allChunks: true,
         }),
         //通过将公共模块拆出来，最终合成的文件能够在最开始的时候加载一次，便存到缓存中供后续使用
