@@ -7,9 +7,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: [
-            path.join(__dirname, '../src/public/js/index.es6')
-        ],
+        // index: [
+        //     path.join(__dirname, '../src/public/js/index.es6')
+        // ],
         tag: [
             path.join(__dirname, '../src/public/js/tag.es6')
         ]
@@ -69,7 +69,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename:'./views/index.html',
             template:'src/views/index.js',
-            chunks:['vendor','index','tag'],
+            chunks:['vendor','tag'],
             inject:false,
         }),
         new HtmlWebpackPlugin({

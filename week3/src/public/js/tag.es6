@@ -1,3 +1,4 @@
+import css from '../css/common.css'
 import PraiseButton from './thumb.es6'
 const f=new PraiseButton();
 let t='';
