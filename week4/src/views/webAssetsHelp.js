@@ -11,10 +11,12 @@ module.exports = function(templateParams, cssList) {
    var _regCss = cssList;
    var _scripts = "";
    var _styles = "";
-   console.log(".......");
+   var _scriptsshow = [];
+//    console.log(".......");
    console.log(cssList);
    for (var i = 0; i < _regChunk.length; i++) {
        _scripts += "<script type='text/javascript'  src='" + _files.chunks[_regChunk[i]]['entry'] + "'></script>";
+       _scriptsshow.push("'" + _files.chunks[_regChunk[i]]['entry'] + "'");
    }
    for (var k = 0; k < _regCss.length; k++) {
        var _cssitem = _regCss[k],
@@ -28,9 +30,10 @@ module.exports = function(templateParams, cssList) {
            }
        });
    }
-   console.error(_styles);
+//    console.error(_styles);
    return {
        scripts: _scripts,
-       styles: _styles
+       styles: _styles,
+       scriptsshow: _scriptsshow
    }
 }

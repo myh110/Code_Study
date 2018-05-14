@@ -3,6 +3,8 @@ const webpack = require('webpack');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var Manifest= require('webpack-manifest');
+var Manifest= require('webpack-manifest');
 // var DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
@@ -17,6 +19,7 @@ module.exports = {
     },
     output: {
         filename: 'public/js/[name]-[hash:5].js',
+        // publicPath: 'http://192.169.10.201:8088/',
         path: path.join(__dirname, '../build/')
     },
     module: {
@@ -89,26 +92,25 @@ module.exports = {
             template: 'src/widget/star.html',
             inject: false,
         }),
-        // 构建优化插件
-        // new webpack.optimize.CommonsChunkPlugin({
-        //   name: 'vendor',
-        //   filename: 'vendor-[hash].min.js',
-        // }),
-        // new webpack.optimize.UglifyJsPlugin({
-        //   compress: {
-        //     warnings: false,
-        //     drop_console: false,
-        //   }
-        // }),
-       
-        // new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-        // // 编译时(compile time)插件
-        // new webpack.DefinePlugin({
-        //   'process.env.NODE_ENV': '"production"',
-        // }),
-        // // webpack-dev-server 强化插件
-        // new DashboardPlugin(),
-        // new webpack.HotModuleReplacementPlugin(),
+        new Manifest({
+            cache: [
+              '../public/css/vendor.css', 
+            ],
+            //Add time in comments.
+            timestamp: true,
+            // 生成的文件名字，选填
+            // The generated file name, optional.
+            filename:'cache.manifest', 
+            // 注意*星号前面用空格隔开
+            network: [
+              ' *'
+            ],
+            // 注意中间用空格隔开
+            // manifest 文件中添加注释
+            // Add notes to manifest file.
+            headcomment: "spa",
+            master: ['../views/layout.html']
+        })
     ],
 
 }

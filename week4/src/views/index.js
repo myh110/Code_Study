@@ -8,7 +8,31 @@ module.exports=function(templateParams){
     "{% endblock %}"+
     "{% block content %}{% include '../widget/index.html' %}{% endblock %}"+
     "{% block script %}"+
-    webAssetsHelp.scripts+
+    // webAssetsHelp.scripts+
+    "<script>" +
+    "(()=>{var flag=false;" +
+    "var scriptsshow=[" + webAssetsHelp.scriptsshow + "];" +
+    "for(let i=0;i<scriptsshow.length;i++){" +
+    "let a=scriptsshow[i];" +
+    "if(localStorage.getItem(a)){" +
+    "$('<scr'+'ipt>'+localStorage.getItem(a)+'</scr'+'ipt>').attr({type:'text/javascript',id:i}).appendTo($('head').remove('#'+i));" +
+    "}" + //end of if
+    //"else{$.getScript({url:a,success:function(data){localStorage.setItem(a,data)}});" +
+    "else{" +
+    "localStorage.clear();flag=true;" +
+    "for (let q =0;q<scriptsshow.length; q++ ) {" +
+    "let b=scriptsshow[q];" +
+    "axios.get(b)." +
+    "then(function(data){localStorage.setItem(b,data.data);})" +
+    "}break;" + //end of for
+    "}" + //end of else
+    "}" + //end of for
+    "if (flag) {"+
+    "console.log(11111);"+
+    "LazyLoad.js(scriptsshow,function(){console.log(2222);});"+
+    "}"+//end of if flag
+    "})()" + //end of function
+    "</script>" +
     "{% endblock %}";
 
     return _html;

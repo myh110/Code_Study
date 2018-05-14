@@ -45,6 +45,10 @@ const indexController = {
         }
     },
 
-
+    advertisement() {
+        return async(ctx, next) => {
+            ctx.body = '<div style="height: 150px;background: orange;">。。。。大幅广告。。。。</div>';
+        }
+    },
 }
 export default indexController

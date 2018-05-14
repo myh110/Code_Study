@@ -5,8 +5,8 @@ let t='';
 xtag.register('x-star', {
     content: "<div class='star' id='star' >" +
     "<div class='star1'></div>" +
-    " </div>" +
-    " <span class='hide' id='animation'>+1</span>",
+    " </div>",
+    // " <span class='hide' id='animation'>+1</span>",
 
     methods: {
         praise: function() {
