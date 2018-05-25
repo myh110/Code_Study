@@ -4,7 +4,6 @@ var LiveReloadPlugin = require('webpack-livereload-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var Manifest= require('webpack-manifest');
-var Manifest= require('webpack-manifest');
 // var DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
@@ -52,9 +51,9 @@ module.exports = {
             }
         }),
         //浏览器自动刷新 
-        new LiveReloadPlugin({
-            appendScriptTag: true
-        }),
+        // new LiveReloadPlugin({
+        //     appendScriptTag: true
+        // }),
         //css提取
         new ExtractTextPlugin({
             filename: 'public/css/vendor-[hash:5].css',

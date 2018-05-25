@@ -28,7 +28,7 @@ module.exports=function(templateParams){
     "}" + //end of else
     "}" + //end of for
     "if (flag) {"+
-    "console.log(11111);"+
+    // "debugger;"+
     "LazyLoad.js(scriptsshow,function(){console.log(2222);});"+
     "}"+//end of if flag
     "})()" + //end of function
