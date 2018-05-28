@@ -1,0 +1,29 @@
+{
+  "name": "week6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build:dev": "gulp",
+    "start:dev": "cross-env NODE_ENV=development supervisor ./dist/app.js",
+    "build:prod": "cross-env NODE_ENV=production  gulp",
+    "docs": "jsdoc ./src/nodeuii/**/*.js -d ./docs/jsdocs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^5.1.6",
+    "koa": "^2.5.1",
+    "koa-simple-router": "^0.2.0",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-watch": "^5.0.0",
+    "jsdoc": "^3.5.5"
+  }
+}
