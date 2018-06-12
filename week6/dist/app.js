@@ -20,13 +20,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const app = new _Koa2.default();
 _controllerinit2.default.init(app, _koaSimpleRouter2.default);
-// app.use(router(_ => {
-//     _.get('/', (ctx, next) => {
-//         ctx.body = 'hello'
-//     })
-//     _.post('/name/:id', (ctx, next) => {
-//         // ...
-//     })
-// })
-// console.log(config);
-app.listen(_index2.default.port);
+
+app.listen(_index2.default.port, () => {
+    console.log(`huihui listening on ${_index2.default.port}`);
+});
