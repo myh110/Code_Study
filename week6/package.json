@@ -16,6 +16,7 @@
     "cross-env": "^5.1.6",
     "koa": "^2.5.1",
     "koa-simple-router": "^0.2.0",
+    "koa-static": "^4.0.3",
     "lodash": "^4.17.10"
   },
   "devDependencies": {
