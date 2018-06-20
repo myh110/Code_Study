@@ -15,7 +15,7 @@ var _path2 = _interopRequireDefault(_path);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 let config = {
-    "viewDir": "",
+    "viewDir": _path2.default.join(__dirname, '..', 'views'),
     "staticDir": _path2.default.join(__dirname, '..', 'assets')
     //todo 增加了非常多无用的代码 导致当前的逻辑过长 导致代码量偏大  对代码进行清洗
 };const init = function () {
