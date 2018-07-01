@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据结构链表</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function List (){
+            this.listSize = 0;//列表元素个数
+            this.pos = 0;//列表当前位置
+            this.dataStore =[];//初始化空数组保存列表元素
+            this.clear = clear;//清空列表元素
+            this.find = find;//寻找元素返回索引
+            this.toString = toString;//返回列表字符串形式
+            this.insert = insert;//插入元素 
+            this.append = append;//末尾添加元素
+            this.remove = remove;//列表中删除元素
+            this.front = front;//从列表当前位置移动到第一个
+            this.end = end;//从列表当前位置移动到最后一个
+            this.prev = prev;//前移以为
+            this.next = next;//后移以为
+            this.length = length;//链表长度
+            this.currPos = currPos;//后移以为
+            this.getElement = getElement;//获取当前元素
+            this.contains = contains;//是否包含当前元素
+        }
+        function clear(){
+            this.dataStore = []
+            this.dataStore.length = 0;
+            this.listSize = this.pos = 0;
+        }
+        function append(element){
+            this.dataStore[this.listSize++] = element;
+        }
+        function find(element){
+            for (var i=0; i<this.listSize ; ++i){
+                if( this.dataStore[i] == element){
+                    return i;
+                }
+            }
+            return -1;
+        }
+        function toString(){
+            return this.dataStore;
+        }
+        function remove(element){
+            var foundAt = this.find(element);
+            if(foundAt > -1){
+                this.dataStore.slice(foundAt, 1);
+                --this.listSize;
+                return 
+            }
+            return false
+        }
+        
+        function insert(element, after){
+            var insertPos = this.find(after);
+            if(insertPos > -1){
+                this.dataStore.splice(insertPos+1, 0, element)
+                ++this.listSize;
+                return true
+            }
+            return false
+        }
+        function front(){
+            this.pos = 0
+        }
+        function next(){
+            if(this.pos < this.listSize){
+                ++this.pos
+            }
+        }
+        function prev(){
+            if(this.pos > 0){
+                --this.pos
+            }
+        }
+        function end(){
+            this.pos = this.listSize -1
+        }
+        function currPos(){
+            return this.pos
+        }
+        function getElement(){
+            return this.dataStore[this.pos];
+        }
+        function contains(element){
+            if(this.find(element) > -1){
+                return true
+            }
+            return false
+        }
+        function length(){
+            return this.listSize;
+        }
+        var sun = new List;
+        sun.append(1)
+        sun.append(2)
+        sun.append(3)
+        sun.next()
+        console.log(sun.getElement())
+        for(sun.front(); sun.currPos()<sun.length(); sun.next()){
+            console.log(sun.getElement())
+        }
+    </script>
+</body>
+</html>
