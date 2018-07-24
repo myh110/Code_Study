@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>栈结构结构</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Stack(){
+            this.dataStore = [];//保存栈内元素
+            this.top = 0;//标记可以插入新元素的位置 栈内压入元素该变量变大 弹出元素变量变小
+            this.push = push;//入栈操作
+            this.pop = pop;//出栈操作
+            this.peek = peek;//返回栈顶元素
+            this.clear = clear;//清空栈
+            this.length = length;//栈长度
+            
+        }
+        //入栈
+        function push (element){
+            this.dataStore[this.top++] = element;
+        }
+        //出栈
+        function pop (){
+            return this.dataStore[--this.top];
+        }
+        //返回栈顶元素
+        function peek (){
+            return this.dataStore[top-1];
+        }
+        //清空栈
+        function clear(){
+            this.top = 0;
+        }
+        //栈长度
+        function length (){
+            return this.top;
+        }
+        var s = new Stack();
+        s.push('小马')
+        s.push('小马2')
+        s.push('小马2')
+        s.pop()
+        s.peek()
+        s.length()
+        console.log(s)
+    </script>
+</body>
+</html>
