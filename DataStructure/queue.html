@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>队列</title>
+</head>
+<body>
+    <script>
+        function Queue(){
+            this.dataStore = [];
+            this.enqueue = enqueue;
+            this.dequeue = dequeue;
+            this.front = front;
+            this.back = back;
+            this.empty = empty;
+            this.toString = toString;
+        }
+        //入队
+        function enqueue(element){
+            this.dataStore.push(element);
+        }
+        //出队
+        function dequeue(){
+            return this.dataStore.shift()
+        }
+        //队首
+        function front(){
+            return this.dataStore[0];
+        }
+        //队尾
+        function back(){
+            return this.dataStore[this.dataStore.length-1];
+        }
+        //是否为空队列
+        function empty(){
+            return this.dataStore.length === 0
+        }
+        function toString(){
+            var reStr = '';
+            for (let index = 0; index < this.dataStore.length; index++) {
+                reStr += this.dataStore[index] + '\n'
+            }
+            return  reStr
+        }
+        var foo = new Queue();
+        foo.enqueue('aa')
+        foo.enqueue('bb')
+        foo.enqueue('vv')
+        foo.enqueue('aas')
+        console.log(foo.toString())
+        foo.dequeue()
+        console.log(foo.toString())
+        console.log(foo.back())
+    </script>
+</body>
+</html>
