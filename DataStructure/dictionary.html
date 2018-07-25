@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Dictionary() {
+            //存储容器
+            this.dataStore = {};
+            //获取值
+            this.get = function (key) {
+                return this.dataStore[key]
+            }
+            //设置值
+            this.set = function (key, value) {
+                this.dataStore[key] = value;
+            }
+            //清空
+            this.clear = function () {
+                this.dataStore = {}
+            }
+            //循环
+            this.display = function (cb) {
+                let keyList = Object.keys(this.dataStore);
+                for (let index = 0; index < keyList.length; index++) {
+                    cb && cb(keyList[index], this.dataStore[keyList[index]], this.dataStore)  
+                }
+            }
+            //删除
+            this.remove = function (key) {
+                if(this.has(key)){
+                    delete this.dataStore[key]
+                    return true
+                }else{
+                    return false
+                }
+            }
+            //字典个数
+            this.size = function () {
+                return Object.keys(this.dataStore).length ;
+            }
+
+            this.has = function (key) {
+                return key in this.dataStore
+            }
+        }
+        let foo = new Dictionary();
+        foo.set('aa', "🍊")
+        foo.set('bb', "🍌")
+        foo.set('cc', "🍍")
+        foo.remove('aa')
+        foo.display((key, val, obj)=>{
+            console.log(key, val , obj)
+        })
+        console.log(foo.size())
+    </script>
+</body>
+</html>
