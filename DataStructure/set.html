@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>结合</title>
+</head>
+
+<body>
+    <script>
+        // 集合是一组无序但彼此之间有一定关联的成员构成的,每一个成员在集合众只能出现一次
+        // 无序的 {1,2,3,4,5}=={5,4,3,2,1}
+        // 不包含任何成员的集合称之为空集,全集则是包含一切可能成员的集合
+        // 如果两个集合的成员完全相同,则称两个集合完全相同
+        // 如何一个集合的所有成员都属于另外一个集合，则前一集合属于后一集合的子集
+
+        function Set() {
+            this.dataStore = [];
+            this.add = add;
+            this.remove = remove;
+            this.size = size;
+            // // 并集操作
+            this.union = union;
+            // // 交集操作
+            // this.intersect = intersect;
+            // // 是否是子集
+            // this.subset = subset;
+            // // 补集
+            // this.difference = difference;
+            this.show = show;
+            this.contains = contains;
+        }
+        function add(item) {
+            if (this.dataStore.indexOf(item) > -1) {
+                return false;
+            } else {
+                this.dataStore.push(item);
+                return true;
+            }
+        }
+        function remove(item) {
+            var pos = this.dataStore.indexOf(item);
+            if (pos > -1) {
+                this.dataStore.splice(pos, 1);
+                return true;
+            }
+            return false;
+        }
+        function size() {
+            return this.dataStore.length;
+        }
+        function contains(item) {
+            return this.dataStore.indexOf(item) > -1;
+        }
+        function show() {
+            return this.dataStore;
+        }
+        // 并集
+        function union(set) {
+            var tempSet = new Set();
+            // 1:将当前的集合元素插入临时集合
+            this.dataStore.forEach(function (item) {
+                tempSet.add(item);
+            });
+            set.dataStore.forEach(function (item) {
+                if (!tempSet.contains(item)) {
+                    tempSet.add(item);
+                }
+            })
+            return tempSet;
+        }
+        // 交集
+        function intersect(set) {
+            var tempSet = new Set();
+            var that = this;
+            set.dataStore.forEach(function (item) {
+                if (that.dataStore.indexOf(item) > -1) {
+                    tempSet.add(item);
+                }
+            })
+            return tempSet;
+        }
+        // 是否子集
+        function subset(set) {
+            return this.dataStore.every(function (item) {
+                return set.dataStore.indexOf(item) > -1
+            })
+        }
+        // 补集,产生一个集合,某个元素属于一个集合不属于另外一个集合
+        function difference(set) {
+            var tempSet = new Set();
+            this.dataStore.forEach(function (item) {
+                if (!set.contains(item)) {
+                    tempSet.add(item);
+                }
+            })
+            return tempSet;
+        }
+    </script>
+</body>
+
+</html>
