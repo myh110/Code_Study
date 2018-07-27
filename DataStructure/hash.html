@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>散列</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+        // 散列是一种常用的数据存储技术，散列后的数据可以快速的插入或者取用，散列使用的数据结构叫做散列表。
+        // 我们的散列是基于数组进行设计的，数组的长度是事先设定的，如有需要可以随时增加，，所有元素根据该元素对应的键，
+        //保存在数组的特定位置，该键和字典中的键是类似的概念，使用散列表来存储数据时，通过一个散列函数将键映射为一个数字，
+        //这个数字的范围是0到散列表的长度。
+        // 需要注意的是：散列表中的数组应该设为多大？ 这个问题是编写散列函数时必须要思考的，对数组大小常见的限制就是：数组长度应该是一个质数。
+        //使用一个类来表示散列表
+        function HashTable(data) {
+            this.table = new Array(137);
+            //散列表中数据分布的方法
+            this.simpleHash = simpleHash;
+            //从散列表中读取数据的方法
+            this.showDistro = showDistro;
+            //向散列表中插入数据的方法
+            this.put = put;
+        }
+        function simpleHash(data) {
+            var total = 0;
+            //将字符串中每个字符的ascII码值相加
+            for (var i = 0; i < data.length; ++i) {
+                total += data.charCodeAt(i);
+            }
+            //将ascII值的和除以数组长度的余数作为散列值
+            return total % this.table.length;
+        }
+        // function put(data) {
+        //     var pos = this.simpleHash(data);
+        //     this.table[pos] = data;
+        // }
+        //线性探测  存储 大于数据的两倍
+        function put(data) {
+            var pos = this.simpleHash(data);
+            if (this.table[pos] == undefined) {
+                this.table[pos] = data;
+            } else {
+                while (this.table[pos] != undefined) {
+                    pos++;
+                }
+                this.table[pos] = data;
+            }
+        }
+
+        function showDistro() {
+            var n = 0;
+            for (var i = 0; i < this.table.length; ++i) {
+                if (this.table[i] != undefined) {
+                    console.log(i + ":" + this.table[i]);
+                }
+            }
+        }
+
+        var someNames = ["David", "Jennifer", "Donnie", "Raymond", "Cynthia", "Mike", "Clayton", "Danny", "Jonathan"];
+        var hTable = new HashTable();
+        for (var i = 0; i < someNames.length; ++i) {
+            hTable.put(someNames[i]);
+        }
+        hTable.showDistro();
+
+    </script>
+</body>
+
+</html>
