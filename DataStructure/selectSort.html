@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选择排序</title>
+</head>
+
+<body>
+    <script>
+        // 选择排序的思想是：把每一个数都与第一个数比较，如果小于第一个数，就把它们交换位置；
+        // 这样一轮下来，最小的数就排到了最前面；重复n-1轮，就实现了选择排序
+        // 选择排序和冒泡排序思想上有些相近
+        class selectSort {
+            constructor(arr) {
+                this.sort(arr)
+                return arr;
+            }
+            swap(arr, index1, index2) {
+                let temp = arr[index1];
+                arr[index1] = arr[index2];
+                arr[index2] = temp;
+            }
+            sort(array) {
+                var len = array.length,
+                    minIndex, nu;
+                for (let index = 0; index < array.length - 2; index++) {
+                    minIndex = index;//记录每次循环的第一个数为该次循环的最小值索引
+                    for (let subIndex = index + 1; subIndex < array.length - 1; subIndex++) {
+                        console.log(array[subIndex], array[subIndex + 1])
+                        if (array[minIndex] > array[subIndex + 1]) {
+                            this.swap(array, minIndex, subIndex + 1);
+                        }
+                    }
+                }
+            }
+        }
+        let examplearr = [8, 94, 15, 88, 55, 76, 21, 39];
+        console.log(new selectSort(examplearr))
+    </script>
+</body>
+
+</html>

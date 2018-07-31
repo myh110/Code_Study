@@ -4,25 +4,12 @@ import log4js from 'log4js';
 import co from "co";
 import serve from 'koa-static';
 import router from "koa-simple-router";
-// import controllerInit from './controllers/controllerinit';
+import controllerInit from './controllers/controllerinit';
 import config from './config/index'
 import errorHandler from './middlewares/errorHandler'
-import { createContainer, Lifetime,asClass, asValue } from "awilix";
-import { loadControllers, scopePerRequest } from 'awilix-koa';
+
+
 const app = new Koa();
-
-
-//ioc控制反转的容器
-const container = createContainer();
-//每一次请求new
-app.use(scopePerRequest(container));
-//装载所有的所有的services到controller 完成利用切面的注入
-container.loadModules([__dirname+'/services/*.js'], {
-    formatName: 'camelCase',
-    resolverOptions: {
-      lifetime: Lifetime.SCOPED
-    }
-});
 //配置前端swig模板
 app.context.render = co.wrap(render({
     root: config.viewDir,
@@ -43,9 +30,7 @@ errorHandler.error(app, logger)
 
 //静态资源
 app.use(serve(config.staticDir));
-// controllerInit.init(app, router);
-//注册所有的controllers
-app.use(loadControllers(__dirname + '/controllers/*.js', { cwd: __dirname }))
+controllerInit.init(app, router);
 
 app.listen(config.port, () => {
     // logger.trace('Entering cheese testing');

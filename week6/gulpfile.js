@@ -11,6 +11,7 @@ gulp.task("builddev", () => {
             //禁用.babelrc 文件 留给webpack用
             babelrc: false,
             "plugins": [
+                "transform-decorators-legacy",
                 "transform-es2015-modules-commonjs"
             ]
         }))
@@ -24,6 +25,7 @@ gulp.task("buildprod", () => {
         babelrc: false,
         ignore:["./src/nodeuii/config/*.js"],
         "plugins": [
+            "transform-decorators-legacy",
             "transform-es2015-modules-commonjs"
         ]
     }))
