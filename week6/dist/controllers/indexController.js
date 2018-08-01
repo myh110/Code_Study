@@ -39,14 +39,14 @@ function _applyDecoratedDescriptor(target, property, decorators, descriptor, con
 }
 
 // @route("/index.html")
-let IndexController = (_dec = (0, _awilixKoa.route)("/index"), _dec2 = (0, _awilixKoa.GET)(), _dec(_class = (_class2 = class IndexController {
+let IndexController = (_dec = (0, _awilixKoa.route)("/"), _dec2 = (0, _awilixKoa.GET)(), _dec(_class = (_class2 = class IndexController {
     constructor({ indexService }) {
         this.indexService = indexService;
     }
 
     async getData(ctx, next) {
         const result = await this.indexService.getData();
-        ctx.body = await ctx.render('index/pages/index', { data: result });
+        ctx.body = await ctx.render('../views/index/pages/index', { data: result });
     }
 }, (_applyDecoratedDescriptor(_class2.prototype, 'getData', [_dec2], Object.getOwnPropertyDescriptor(_class2.prototype, 'getData'), _class2.prototype)), _class2)) || _class);
 exports.default = IndexController;

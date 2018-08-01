@@ -1,5 +1,5 @@
 import { route, GET, POST, before } from 'awilix-koa';
-@route("/index")
+@route("/")
 // @route("/index.html")
 export default class IndexController {
     constructor({ indexService }) {
@@ -8,6 +8,6 @@ export default class IndexController {
     @GET()
     async getData(ctx, next){
         const result = await this.indexService.getData();
-        ctx.body = await ctx.render('index/pages/index', { data: result });
+        ctx.body = await ctx.render('../views/index/pages/index', { data: result });
     }
 }

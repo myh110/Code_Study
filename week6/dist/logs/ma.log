@@ -1,0 +1,5 @@
+[2018-07-31T16:47:34.237] [ERROR] cheese - { Error: ENOENT: no such file or directory, open '/Users/ma/study/Code_Study/week6/dist/viewsindex/pages/index.html'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/ma/study/Code_Study/week6/dist/viewsindex/pages/index.html' }

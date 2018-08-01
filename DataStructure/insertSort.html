@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>插入排序</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+        //https://blog.csdn.net/luanpeng825485697/article/details/78056387
+        // 插入排序的原理其实很好理解，可以类比选择排序。选择排序时在两个空间进行，
+        // 等于说每次从旧的空间选出最值放到新的空间，而插入排序则是在同一空间进行。
+        function insertSort(array) {
+            for (let index = 1; index < array.length; index++) {
+                var key = array[index];
+                var j = index - 1; 
+                while (array[j] > key) {
+                    array[j + 1] = array[j];
+                    j--
+                } 
+                array[j + 1] = key;              
+            }
+            return array
+        }
+
+        var arr=[3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
+        console.log(insertSort(arr));
+    </script>
+</body>
+</html>
