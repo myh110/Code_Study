@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>快排</title>
+</head>
+<body>
+    <script>
+        function quickSort (arr){
+            if(arr.length === 0){
+                return []
+            };
+            var flog = arr[0];
+            var leftArr = []
+            var rightArr = [];
+            for (var index = 1; index < arr.length; index++) {
+                if(arr[index]>flog){
+                    rightArr.push(arr[index])
+                }else{
+                    leftArr.push(arr[index])
+                }
+            }
+            return quickSort(leftArr).concat(flog,quickSort(rightArr))
+        }    
+
+        var sun = [1,54,22,12,55,33,67];
+        console.log(quickSort(sun))
+    </script>
+</body>
+</html>
