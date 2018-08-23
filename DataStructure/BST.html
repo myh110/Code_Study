@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>二叉树</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function Node(data, left, right) {
+            this.data = data;
+            this.left = left;
+            this.right = right;
+
+        }
+        function BST(params) {
+            this.root = null;
+            this.insert = insert;
+            this.display = display;
+            this.min = min;
+            this.max = max;
+            this.preTravel = preTravel;
+            this.show = () => {
+                console.log(this.root);
+            }
+        }
+        //前序遍历
+        function preTravel(root) {
+            if (root == null) {
+                return;
+            }
+            this.preTravel(root.left);
+            console.log(root.data);
+            this.preTravel(root.right);
+        }
+
+
+        function insert(data) {
+            var node = new Node(data, null, null)
+            if (this.root === null) {
+                this.root = node
+            } else {
+                var current = this.root;
+                var parent;
+                while (current) {
+                    parent = current;
+                    if (parent.data > data) {
+                        current = parent.left;
+                        if (parent.left === null) {
+                            parent.left = node;
+                            break;
+                        }
+                    } else {
+                        current = parent.right;
+                        if (parent.right === null) {
+                            parent.right = node;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        function find(val) {
+
+        }
+        function max(params) {
+            var root = this.root;
+            while (root.right !== null) {
+                root = root.right
+            }
+            return root.data
+        }
+        function min() {
+            var root = this.root;
+            while (root.left !== null) {
+                root = root.left
+            }
+            return root.data
+        }
+        function removeNode(node) {
+
+        }
+        function display(cb) {
+
+        }
+        const bst = new BST();
+        bst.insert(23);
+        bst.insert(12);
+        bst.insert(11);
+        bst.insert(22);
+        bst.insert(44);
+        bst.insert(13);
+        bst.show();
+        bst.preTravel(bst.root)
+    </script>
+</body>
+
+</html>
