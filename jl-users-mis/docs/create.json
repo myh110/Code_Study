@@ -1,0 +1,108 @@
+{
+    "game_desc": "这里是接龙描述我",
+    "game_title": "最新测试接龙数据结构",
+    "item_list": [
+        {
+            "item_name": "商品一号",
+            "item_unit": "规格",
+            "item_desc": "扫码支付哟",
+            "item_id": "8315525186574191003",
+            "item_price": "12.00",
+            "order_limit": "7788",
+            "inventory_num": "100",
+            "inventory_total": "100",
+            "game_id": "7671791914836921362",
+            "img_list": [
+                "d2e1b96236215a2d9b53dd"
+            ],
+            "qty": 0,
+            "sale_qty": "0",
+            "is_show_status": true,
+            "img_list_addr": [
+                {
+                    "id": "d2e1b96236215a2d9b53dd",
+                    "large": "https://ygres-tests.elianshang.com/d2e1b96236215a2d9b53dd@!item_large",
+                    "medium": "https://ygres-tests.elianshang.com/d2e1b96236215a2d9b53dd@!item_medium",
+                    "small": "https://ygres-tests.elianshang.com/d2e1b96236215a2d9b53dd@!item_small",
+                    "tiny": "https://ygres-tests.elianshang.com/d2e1b96236215a2d9b53dd@!item_tiny",
+                    "origin": "https://ygres-tests.elianshang.com/d2e1b96236215a2d9b53dd"
+                }
+            ]
+        }
+    ],
+    "delivery_type": 3,
+    "img_list": [
+        "f00ed5ba7fa58367523ca5",
+        "580c49601a89ded71031b7",
+        "d2e1b96236215a2d9b53dd",
+        "7be2fe1484a01d0ca0e078",
+        "ff634191034995efd3a561"
+    ],
+    "video_list": [
+        {
+            "video_id": "c17008805246f49771d5d6"
+        }
+    ],
+    "delivery_address_id": [
+        "1774750415258956261"
+    ],
+    "end_at": "2019-01-12 00:00:00",
+    "msg_push": 1,
+    "online_pay": 1,
+    "is_show": 1,
+    "status": 2,
+    "game_detail": [
+        {
+            "list": [
+                {
+                    "type": "img",
+                    "url": {
+                        "id": "580c49601a89ded71031b7",
+                        "large": "https://ygres-tests.elianshang.com/580c49601a89ded71031b7@!common_large",
+                        "medium": "https://ygres-tests.elianshang.com/580c49601a89ded71031b7@!common_medium",
+                        "small": "https://ygres-tests.elianshang.com/580c49601a89ded71031b7@!common_small",
+                        "tiny": "https://ygres-tests.elianshang.com/580c49601a89ded71031b7@!common_tiny",
+                        "origin": "https://ygres-tests.elianshang.com/580c49601a89ded71031b7"
+                    }
+                }
+            ],
+            "text": "我是图片描述的文案"
+        },
+        {
+            "list": [
+                {
+                    "type": "video",
+                    "url": {
+                        "id": "c17008805246f49771d5d6",
+                        "large": "https://ygres-tests.elianshang.com/c17008805246f49771d5d6@!common_large",
+                        "medium": "https://ygres-tests.elianshang.com/c17008805246f49771d5d6@!common_medium",
+                        "small": "https://ygres-tests.elianshang.com/c17008805246f49771d5d6@!common_small",
+                        "tiny": "https://ygres-tests.elianshang.com/c17008805246f49771d5d6@!common_tiny",
+                        "origin": "https://ygres-tests.elianshang.com/c17008805246f49771d5d6",
+                        "snapshot": "https://ygres-tests.elianshang.com/c17008805246f49771d5d6?x-oss-process=video/snapshot,t_000,f_jpg,w_0,h_920,m_fast"
+                    }
+                }
+            ],
+            "text": "我是视频描述的文案"
+        }
+    ],
+    "award_list": {
+        "share": 1,
+        "random": 1,
+        "share_open": 1,
+        "share_rule": {
+            "money": "1",
+            "type": 1
+        },
+        "random_rule": {
+            "min_money": 0,
+            "max_money": "12",
+            "type": 1
+        }
+    },
+    "op_rules": {
+        "group_buy_price": "2131"
+    },
+    "game_id": "7671791914836921362",
+    "page_type": "2"
+}
