@@ -1,0 +1,157 @@
+/* pages/photo/photo.wxss */
+.mod-my-photo {
+	box-sizing: border-box;
+	height: 100%;
+	background-color: #fff;
+  border-top: 1rpx solid #eee;
+  
+}
+
+.btn {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	margin: auto;
+	margin-top: 40rpx;
+	width: 526rpx;
+	height: 90rpx;
+	border: 0;
+	background-color: #ffda3b;
+	box-shadow: 0 3rpx 0.6rpx 0 #ffe3a9
+}
+
+.mod-my-photo .tips-container {
+  margin-bottom: 40rpx;
+	padding-left: 40rpx; 
+}
+.step-three .tips-container{
+  padding-left: 0; 
+}
+
+.upload-tips-label{
+  font-family: PingFangSC-Semibold;
+  padding-top:40rpx;
+  font-size: 48rpx;
+}
+
+.upload-tips-desc {
+  padding-top:25rpx;
+	color: #666;
+	letter-spacing: 2.15rpx;
+	font-size: 28rpx
+}
+
+.user-img-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+	margin:0 40rpx; 
+	/* margin-top: 82rpx; */
+	/* width: 628rpx; */
+	height: 916rpx;
+	background-color: #efefef;
+}
+.img-photo {
+	width: 158rpx;
+	height: 128rpx
+}
+
+.btn-take-photo {
+	margin-top: 44rpx;
+	margin-bottom: 0;
+	width: 200rpx;
+}
+
+ .mod-my-photo .step-two,.mod-my-photo .step-three {
+	/* padding-top: 44rpx; */
+  margin:0 40rpx; 
+} 
+.step-two{
+  padding-top:44rpx;
+}
+.mod-my-photo .step-two .img-head,.mod-my-photo .step-three .img-head {
+	display: block;
+	margin: 0 auto;
+	padding-top: 1rpx;
+	width: 452rpx
+}
+
+.mod-my-photo .step-two .description-head,.mod-my-photo .step-three .description-head {
+	margin-top: 56rpx;
+	text-align: center;
+	font-size: 32rpx
+}
+
+.mod-my-photo .step-two .btn-take-photo,.mod-my-photo .step-two .btn-upload-photo,.mod-my-photo .step-three .btn-take-photo,.mod-my-photo .step-three .btn-upload-photo {
+	margin-right: 110rpx;
+	background-color: #ffda3b;
+	color: #333
+}
+
+.mod-my-photo .step-two .btn-take-photo,.mod-my-photo .step-three .btn-take-photo {
+	margin-top: 110rpx
+}
+
+.mod-my-photo .step-two .btn-upload-photo,.mod-my-photo .step-three .btn-upload-photo {
+	width: 200rpx
+}
+
+.mod-my-photo .step-two .btn-take-photo-again,.mod-my-photo .step-three .btn-take-photo-again {
+	margin-left: 136rpx;
+	width: 200rpx;
+	background-color: #efefef;
+	background-image: none;
+	box-shadow: none
+}
+
+.mod-my-photo .step-two .user-img,.mod-my-photo .step-three .user-img {
+	display: block;
+	/* margin: auto; */
+	/* max-width: 582rpx; */
+	 max-height: 730rpx; 
+	/* border-radius: 16rpx; */
+  width: 100%;
+  height: 100%;
+}
+
+.mod-my-photo .step-two .btn-container-upload,.mod-my-photo .step-three .btn-container-upload {
+	/* margin-top: 44rpx */
+}
+
+.mod-my-photo .step-two .btn-container-upload,.mod-my-photo .step-four,.mod-my-photo .step-three .btn-container-upload {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+  font-size: 32rpx;
+}
+
+.mod-my-photo .step-four {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column
+}
+
+.mod-my-photo .step-four .successful-img {
+	margin-top: 166rpx;
+	width: 260rpx;
+  height: 128rpx;
+}
+
+.mod-my-photo .step-four .success {
+	margin-top: 88rpx;
+	font-size: 48rpx
+}
+
+
+
+.mod-my-photo .btn-take-photo-center {
+	margin-left: 110rpx
+}

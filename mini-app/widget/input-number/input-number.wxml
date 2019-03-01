@@ -1,0 +1,6 @@
+<!--widget/input-number/input-number.wxml-->
+<view class="ui-input-number">
+    <image bindtap="setNumber" data-type="delete" class="btn btn-link icon icon-delete" src="../../images/pics/icon-reduce.png"></image>
+    <view class="result">{{result}}</view>
+    <image bindtap="setNumber" data-type="add" class="btn btn-link icon icon-add" src="../../images/pics/icon-add.png"></image>
+</view>

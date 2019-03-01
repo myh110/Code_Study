@@ -1,0 +1,34 @@
+/* pages/coupons/coupons.wxss */
+.mod-coupon-list{
+  box-sizing: border-box;
+  background-color: #ebebeb;
+  height: 100%;
+  /* overflow: hidden; */
+  padding-top: 28rpx;
+}
+
+.no-coupons-img{
+  margin: 0 auto;
+  width: 240rpx;
+  height: 120rpx;
+  margin-top: 160rpx;
+  margin-left: 255rpx;
+}
+.tips{
+  font-size: 28rpx;
+  letter-spacing: 0.6rpx;
+  margin-top: 38rpx;
+  color: #333;
+  text-align: center;
+}
+.coupon-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nomore-coupon{
+  padding-top: 28rpx;
+  padding-bottom: 28rpx;
+  text-align: center;
+}

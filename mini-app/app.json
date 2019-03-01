@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/free/free",
+    "pages/my/my",
+    "pages/coupons/coupons",
+    "pages/order-list/order-list",
+    "pages/order-detail/order-detail",
+    "pages/photo/photo",
+    "pages/shop-way/shop-way",
+    "pages/about-us/about-us",
+    "pages/buy-result/buy-result"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "邻选无人便利店",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance":40
+  },
+  "tabBar": {
+    "selectedColor": "#333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon/icon-home.png",
+        "selectedIconPath": "images/icon/icon-home-selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/icon/icon-mine.png",
+        "selectedIconPath": "images/icon/icon-mine-selected.png"
+      }
+    ]
+  }
+}

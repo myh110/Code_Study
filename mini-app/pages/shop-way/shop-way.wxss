@@ -1,0 +1,16 @@
+.mod-shop-way{
+  position: relative;
+}
+.method{
+  width:100%;
+  vertical-align:top;
+}
+.method .png1{
+  height:320rpx;
+}
+.method .png2{
+  height:680rpx;
+}
+.method .png3{
+  height:482rpx;
+}

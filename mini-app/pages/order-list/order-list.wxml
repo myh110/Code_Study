@@ -1,0 +1,9 @@
+<view class="mod-order-list">
+  <view class="list">
+    <block wx:for="{{list}}" wx:key="{{item}}">
+      <order-item order="{{item}}"></order-item>
+    </block>
+    <view wx:if="{{isEnd && list.length !== 0}}" class="no-more">没有更多啦</view>
+    <view wx:if="{{list.length === 0}}" class="no-more">暂无订单</view>
+  </view>
+</view>

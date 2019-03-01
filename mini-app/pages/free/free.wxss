@@ -1,0 +1,425 @@
+.mod-free-buy {
+    /* overflow-y: scroll; */
+    box-sizing: border-box;
+    /* height: 100%; */
+    font-size: 28rpx;
+}
+page {  
+  background-color: #F6F6F6; 
+}  
+.mod-free-buy .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 750rpx;
+    height: 88rpx;
+    border-bottom: 1rpx solid #e2e2e2;
+    background-color: #fff;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: 28rpx;
+}
+
+.mod-free-buy .header,
+.mod-free-buy .header .shop-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.mod-free-buy .header .shop-name {
+    margin-left: 26rpx;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start
+}
+
+.mod-free-buy .header .shop-name .icon-location {
+    margin-right: 10rpx;
+    width: 20rpx;
+    height: 26rpx;
+}
+
+.mod-free-buy .header .self-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 26rpx;
+    color: #f5a623;
+    cursor: pointer;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: end;
+    align-content: flex-end
+}
+
+.mod-free-buy .header .self-input .icon-input {
+    width: 29rpx
+}
+
+.mod-free-buy .sum-part {
+    position: fixed;
+    bottom: 104rpx;
+    padding-left: 44rpx;
+    width: 100%;
+    height: 102rpx;
+    background: #fff;
+    /* box-shadow: 0 -3rpx 6rpx 0 rgba(255, 239, 205, .5); */
+    border-top: 1rpx solid #e2e2e2;
+    font-size: 24rpx
+}
+
+.mod-free-buy .sum-part,
+.mod-free-buy .sum-part .sum-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.mod-free-buy .sum-part .sum-item {
+    width: 660rpx;
+    height: 50rpx;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+
+.mod-free-buy .sum-part .sum-item .discount-money {
+    margin-right: 26rpx;
+    color: #9b9b9b;
+    letter-spacing: .8rpx
+}
+
+.mod-free-buy .sum-part .price {
+    color: #ff1744;
+    font-size: 32rpx;
+}
+
+.mod-free-buy .sku-list {
+    padding-top: 88rpx
+}
+
+.mod-free-buy .sum-list {
+    margin-top: 44rpx;
+    margin-bottom: 252rpx;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 0 44rpx;
+}
+
+.mod-free-buy .sum-list .sum-item {
+    /* width: 660rpx; */
+    height: 80rpx;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.mod-free-buy .sum-list .sum-item,
+.mod-free-buy .sum-list .sum-item .discount-part {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.mod-free-buy .sum-list .sum-item .discount-part {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.mod-free-buy .sum-list .sum-item .discount-part .touch-tips {
+    color: #ffda3b;
+    font-size: 20rpx
+}
+
+.mod-free-buy .sum-list .sum-item .no-coupon {
+    color: #999
+}
+
+.mod-free-buy .sum-list .sum-item .coupon-count {
+    color: #fda228
+}
+
+.mod-free-buy .sum-list .sum-item .price {
+    color: #ff1744
+}
+
+.mod-free-buy .foot-bar {
+    position: fixed;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.mod-free-buy .foot-bar .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 375rpx;
+    height: 104rpx;
+    font-size: 32rpx;
+    line-height: 104rpx
+}
+
+.mod-free-buy .foot-bar .btn.add-good {
+    background-color: #fffce0
+}
+
+.mod-free-buy .foot-bar .btn.go-pay {
+    background-color: #ffda3b;
+    color: #333
+}
+
+.mod-free-buy .code-wrap {
+    padding: 26rpx
+}
+
+.mod-free-buy .code-notice {
+    color: #4a4a4a;
+    text-align: center;
+    font-size: 26rpx
+}
+
+.mod-free-buy .code-input {
+    box-sizing: border-box;
+    padding: 14rpx 26rpx;
+    width: 100%;
+    border: 1.4rpx solid #4a4a4a;
+    border-radius: 16rpx;
+    font-size: 16rpx
+}
+
+.mod-free-buy .coupons {
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: 85rpx;
+    background-color: #ebebeb;
+}
+.mod-free-buy .self-input-modal{
+	position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    overflow: scroll;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.self-input-window{
+	position: fixed;
+  top: 30%;
+  left: 50%;
+  z-index: 1000;
+	width: 500rpx;
+	height: 300rpx;
+	margin-left: -250rpx;
+	background-color: #fff;
+	border-radius: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.self-tips{
+  margin-top: 20rpx;
+}
+
+.self-code{
+  box-sizing: border-box;
+  width: 360rpx;
+  height: 80rpx;
+  margin-top: 30rpx;
+  padding-top: 12rpx;
+  padding-right: 26rpx;
+  padding-bottom: 12rpx;
+  padding-left: 26rpx;
+  border: 1rpx solid #4A4A4A;
+  border-radius: 16rpx;
+  font-size: 26rpx;
+}
+.self-input-window .btn{
+  width: 140rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.self-input-window .confirm{
+  background-color: #ffda3b;
+}
+.self-input-window .cancle{
+  background-color: #fffce0;
+}
+
+.self-btns{
+  box-sizing: border-box;
+  width: 360rpx;
+  height: 80rpx;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mod-free-buy .coupons .btn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 400rpx;
+    height: 80rpx;
+    background-color: #f5a623;
+    color: #fff;
+    text-align: center;
+}
+
+.mod-free-buy .coupons .coupon-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* overflow: hidden; */
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ebebeb;
+}
+.mod-free-buy .coupons .back-container{
+    position: fixed;
+    top:0;
+    width:100%;
+    box-sizing: border-box;
+    padding:0 20rpx;
+    background: #ebebeb;
+    font-size:36rpx;
+    height:85rpx;
+    z-index:1000;
+}
+.mod-free-buy .coupons .back-container .back{
+    height:85rpx;
+    line-height:85rpx;
+}
+.mod-free-buy .coupons .back-container .icon-back{
+    position: absolute;
+    left:0;
+    top:0;
+    width:32rpx;
+}
+
+.mod-free-buy .scan-market-code-title {
+    margin: 0 auto;
+    margin-top: 240rpx;
+    padding-bottom: 24rpx;
+    width: 452rpx;
+    height: 70rpx;
+    border-bottom: 1rpx solid #d8d8d8;
+    text-align: center
+}
+
+.mod-free-buy .scan-market-code-tips {
+    margin-top: 44rpx;
+    color: #666;
+    text-align: center;
+    letter-spacing: 2.1rpx;
+    font-size: 20rpx
+}
+
+.mod-free-buy .scan-market-code-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 310rpx 111rpx 0;
+    width: 528rpx;
+    height: 88rpx;
+    background: #ffda3b;
+    box-shadow: 0 3px 1rpc 0 rgba(255, 218, 59, .5);
+    color: #2c2a27;
+    letter-spacing: 1rpx;
+    font-size: 32rpx;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.mod-free-buy .scan-code-icon {
+  position: fixed;
+  top: 770rpx;
+  left: 157rpx;
+  z-index: 30;
+  width: 436rpx;
+  height: 436rpx
+}
+
+.mod-free-buy .bottom-background {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 750rpx
+}
+
+.mod-footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100rpx;
+  background-color: #ebebeb
+}
+
+.mod-footer,
+.mod-footer .ensure-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+
+.mod-footer .ensure-container .ensure {
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-left:-75rpx;
+  margin-top:-26rpx;
+  width:150rpx;
+  height:52rpx;
+  text-align: center;
+  line-height: 52rpx;
+  letter-spacing: 1.5rpx;
+  font-size: 32rpx;
+  background-color: #ffda3b;
+  color: #333
+}
+
+.mod-footer.line {
+  border-bottom: 1rpx solid #ebebeb
+}

@@ -1,0 +1,19 @@
+/* pages/order-list/order-list.wxss */
+.mod-order-list{
+  box-sizing: border-box;
+  background-color: #ebebeb;
+  height: 100%;
+  padding-top: 28rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.no-more{
+  padding-top: 28rpx;
+  padding-bottom: 28rpx;
+}

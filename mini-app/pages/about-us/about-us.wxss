@@ -1,0 +1,26 @@
+/* pages/about-us/about-us.wxss */
+.logo-center{
+  width: 345rpx;
+  height: 186rpx;
+  margin-top: 120rpx;
+  margin-left: 203rpx;
+}
+.tips-part{
+  margin-top: 500rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.phone-number{
+  color: #FFA300;
+}
+.tips{
+  font-size: 28rpx;
+  color: #333333;
+  letter-spacing: 3.65rpx;
+  margin-bottom: 40rpx;
+}
+.workday{
+  color: #999;
+}

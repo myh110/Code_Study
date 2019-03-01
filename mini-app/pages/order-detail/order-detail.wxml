@@ -1,0 +1,47 @@
+<view class="mod-order-detail">
+    <view class="order-detail">
+        <view class="group">
+            <view class="tips date"><view class="color"></view>{{orderTimeFormat}}</view>
+            <view class="tips id">订单编号：{{orderHead.order_id}}</view>
+            <view class="left-circle circle"></view>
+            <view class="right-circle circle"></view>
+        </view>
+        <view class="group sku-list">
+            <ul class="good-list">
+                <block wx:for="{{orderDetail}}" wx:for-index="ind" wx:for-item="good" wx:key="good.sku_id">
+                    <li class="good">
+                        <image class="sku-img" src="{{good.sku_info.pic_url}}" alt=""></image>
+                        <view class="sku-group">
+                            <view class="sku-name">{{good.sku_info.sku_name}}</view>
+                            
+                        </view>
+                        <view>
+                          <view class="price">￥{{good.price}}</view>
+                          <view class="sku-qty">x{{good.qty}}</view>
+                          
+                        </view>
+                        
+                    </li>
+                </block>
+            </ul>
+            <view class="left-circle circle"></view>
+            <view class="right-circle circle"></view>
+        </view>
+        
+        <view class="group sum">
+            <view class="sum-price"><view class="color-total"></view>合计 <text class="right">￥{{orderHead.sku_money}}</text></view>
+            <view class="sum-price">折扣 <text class="right money">-￥{{discountMoney}}</text></view>
+            <view class="sum-price last">优惠券 <text class="right money">-￥{{orderHead.coupon_info.coupon_money || 0.0}}</text></view>
+            <view class="left-circle circle"></view>
+            <view class="right-circle circle"></view>
+        </view>
+        <view class="group payment">
+            <view class="payment-inner">
+                <!-- <text class="discount">共节省￥{{savingMoney}}</text> -->
+                <text>实付</text>
+                <text class="money">￥{{orderHead.money}}</text>
+            </view>
+        </view>
+
+    </view>
+</view>

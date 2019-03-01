@@ -1,0 +1,150 @@
+.mod-home{
+  overflow: hidden;
+  border-top:1px solid #ebebeb;
+}
+.home-header{
+  padding:40rpx;
+}
+.home-header .icon-logo{
+  width:262rpx;
+  height:122rpx;
+}
+.guide-wrap{
+  margin:0 40rpx;
+  padding:40rpx 0;
+  width:670rpx;
+  border-width:1px 0;
+  border-style: solid;
+  border-color: #eee;
+  display: flex;
+  flex-direction:row;
+  justify-content:space-between;
+}
+.guide-wrap .flex-block{
+  position: relative;
+  padding:22rpx 20rpx 21rpx 24rpx;
+  width:315rpx;
+  height:124rpx;
+  box-sizing: border-box;
+  border-radius:3px;
+  background: #F9F9F9;
+  box-shadow: 0 1px 12px 0 rgba(52,84,122,0.15);
+}
+.guide-wrap .flex-block .guide-img{
+  position:absolute;
+  top:20rpx;
+  right:20rpx;
+  width:80rpx;
+  height:64rpx;
+}
+.lg-text{
+  font-size:32rpx;
+  font-family: bold;
+  color:#333;
+}
+.sm-text{
+  font-size: 20rpx;
+  color:#333;
+}
+.scan-wrap{
+  height:500rpx;
+  position: relative;
+}
+.scan-wrap .scan-code-icon{
+  position: fixed;
+  margin-left:-180rpx;
+  bottom:164rpx;
+  left:50%;
+  width:360rpx;
+  height:360rpx;
+}
+.scan-wrap .store-sign{
+  font-size:32rpx;
+  color:#666;
+  padding-left:8rpx;
+}
+.sign-position{
+  position: absolute;
+  top:40rpx;
+  left:40rpx;
+  height:33rpx;
+  line-height:33rpx;
+}
+.sign-position .icon-address{
+  width:16rpx;
+  height:24rpx;
+}
+.dialog-modal{
+  position: fixed;
+  width:100%;
+  height:100%;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.mask{
+  position: absolute;
+  width:100%;
+  height:100%;
+  background-color: #000;
+  opacity: .3;
+}
+.modal-content{
+  position: absolute;
+  /* margin-top:-150rpx;
+  margin-left:-250rpx; */
+  padding:30rpx;
+  transform: translate(-50%,-50%);
+  top:50%;
+  left:50%;
+  /* width:500rpx;
+  height:300rpx; */
+  width:540rpx;
+  /* height:50%; */
+  text-align: center;
+  font-size:32rpx;
+  background: #fff;
+  z-index:1000;
+  border-radius:10rpx;
+}
+.modal-text{
+  padding:50rpx;
+}
+.btn-getphone{
+  margin:0 auto;
+  width:300rpx;
+  font-size:32rpx;
+  background: #ffda3b;
+  color:#333;
+}
+.modal-bgcolor{
+  background:#fff;
+  z-index:1000;
+}
+.tx-center{
+  text-align: center;
+}
+.open-tip{
+  padding:48rpx 36rpx;
+  position: relative;
+}
+.open-tip .tip-title{
+  text-align: center;
+  font-size: 40rpx;
+  padding:0 10.5rpx 32rpx;
+}
+.open-tip .close{
+  position: absolute;
+  top:-82rpx;
+  right:0;
+  width:50rpx;
+  height:50rpx;
+}
+.open-tip .quit-program{
+  color:#fdac34;
+}
+.open-tip .quit-tip{
+  font-size:28rpx;
+  color: #999;
+}

@@ -1,0 +1,37 @@
+<view class="mod-my-photo">
+  
+  <view class="step-one" wx:if="{{step === 1}}">
+    <view class="tips-container">
+    <view class="upload-tips-label">请上传一张正面照</view>
+    <view class="upload-tips-desc">本人、近期、无修图照片</view>
+  </view>
+    <view class="user-img-container">
+      <image class="img-photo" src="../../images/pics/image-photo.png" alt=""></image>
+      <view class="btn btn-take-photo" bindtap='chooseImage'>上传照片</view>
+    </view>
+  </view>
+
+
+  <view class="step-two" wx:if="{{step === 2}}">
+    <image mode="widthFix" class="user-img" src="{{userInfo.face_img[0].origin}}" alt="" wx:if="{{userInfo.face_img}}"></image>
+    <view class="btn btn-take-photo-first" bindtap='chooseImage'>重新上传</view>
+  </view>
+
+  <view class="step-three" wx:if="{{step === 3}}">
+  <view class="tips-container">
+    <view class="upload-tips-label">确认照片</view>
+    <view class="upload-tips-desc">本人、近期、无修图照片</view>
+  </view>
+    <image mode="widthFix" class="user-img" src="{{image}}" alt=""></image>
+    <view class="btn-container-upload">
+      <view class="btn btn-take-photo-again" bindtap='chooseImage'>重新拍摄</view>
+      <view class="btn btn-upload-photo" bindtap='uploadImage'>确认修改</view>
+    </view>
+
+  </view>
+
+  <view class="step-four" wx:if="{{step === 4}}">
+    <image mode="scaleToFill" class="successful-img" src="../../images/pics/image-registered-successfully.png" alt=""></image>
+    <view class="success">修改成功</view>
+  </view>
+</view>

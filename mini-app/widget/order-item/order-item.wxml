@@ -1,0 +1,14 @@
+<!--widget/order-item/order-item.wxml-->
+<view class="mod-order-item" bindtap='goDetail'>
+  <view class="title"><view class="color"></view>{{orderTimeFormat}}</view>
+  <view class="order-id">订单编号：{{order.order_id || "22222"}}</view>
+  <view class="img-list">
+      <block wx:for="{{order.order_detail_list}}" wx:key="item.sku_id">
+          <image class="sku-img" key="{{item.sku_id}}" src="{{item.sku_info.pic_url}}" alt=""></image>
+      </block>
+  </view>
+  <view class="details-part">
+      <view class="pay-money">实付：￥{{order.money || "0"}}</view>
+      <view class="go-detail">查看详情</view>
+  </view>
+</view>

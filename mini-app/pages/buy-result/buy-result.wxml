@@ -1,0 +1,17 @@
+<view class="mod-pay-result">
+    <image class="{{hasCoupon ? 'less' : ''}}" mode="widthFix" class="successful-img" src="../../images/pics/image-registered-successfully.png"
+        alt=""></image>
+    <view class="title">支付成功</view>
+    <view class="coupons-part" wx:if="{{hasCoupon}}">
+        <view class="tips-part">
+            <view class="liner before"></view>
+            <view class="tips">恭喜您获得邻选优惠券</view>
+            <view class="liner after"></view>
+        </view>
+        <image src="../../images/pics/trim-strip-top.png" mode="widthFix" alt="" class="trim trim-top"></image>
+        <view class="coupon">
+            <coupon-item coupon="{{couponInfo}}" circle-bg-color="#FFFCE0"></coupon-item>
+        </view>
+        <image src="../../images/pics/trim-strip-bottom.png" mode="widthFix" alt="" class="trim trim-bottom"></image>
+    </view>
+</view>

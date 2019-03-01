@@ -1,0 +1,67 @@
+/* widget/order-item/order-item.wxss */
+.mod-order-item{
+  width: 750rpx;
+  height: 360rpx;
+  min-height:360rpx;
+  border-bottom: 1rpx solid #ebebeb;
+  box-sizing: border-box;
+  padding: 40rpx;
+  font-size: 28rpx;
+  background-color: white;
+}
+.title{
+  position: relative;
+  line-height: 42rpx;
+  letter-spacing: 1rpx;
+}
+.color{
+  display: block;
+  position: absolute;
+  width: 8rpx;
+  height: 20rpx;
+  top: 8rpx;
+  left: -14rpx;
+  background-color: #F5A623;
+}
+.order-id{
+  font-size: 20rpx;
+  letter-spacing: 0.8rpx;
+  color: #9B9B9B;
+}
+.img-list{
+  height: 90rpx;
+  margin-top: 28rpx;
+  overflow: hidden;
+}
+.sku-img{
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 16rpx;
+  border-width: 1rpx;
+  border-style: solid;
+  border-color: #ebebeb;
+    
+}
+.details-part{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 31rpx;
+}
+.pay-money{
+  font-family: "PingFangSC-Semibold";
+  letter-spacing: 0.9rpx;
+  color: #4A4A4A;
+}
+.go-detail{
+  width: 130rpx;
+  height: 44rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F5A623;
+  border-width: 3rpx;
+  border-style: solid;
+  border-color: #F5A623;
+  font-size: 24rpx;
+}

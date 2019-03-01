@@ -1,0 +1,5 @@
+<view class="mod-shop-way">
+  <image mode='widthFix' class="method png1" src="../../images/pics/image-shopping-method-1.png"></image>
+  <image mode='widthFix' class="method png2" src="../../images/pics/image-shopping-method-2.png"></image>
+  <image mode='widthFix' class="method png3" src="../../images/pics/image-shopping-method-3.png"></image>
+</view>

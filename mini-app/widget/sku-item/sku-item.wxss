@@ -1,0 +1,38 @@
+/* widget/sku-item/sku-item.wxss */
+
+.mod-sku-item {
+    padding: 45rpx 34rpx 0 34rpx;
+    min-height: 234rpx;
+    /* border-bottom: 1rpx solid #e2e2e2; */
+    background-color: #fff;
+    box-sizing: border-box;
+    
+}
+
+.mod-sku-item .sku-img {
+    float: left;
+    width: 146rpx;
+    height: 146rpx;
+    border-radius: 16rpx
+}
+
+.mod-sku-item .sku-group {
+    padding-left: 174rpx;
+
+}
+
+.mod-sku-item .name {
+    letter-spacing: 1rpx
+}
+
+.mod-sku-item .price-container {
+    display: flex;
+    margin-top: 48rpx;
+    height: 62.5rpx;
+    justify-content: space-between;
+}
+
+.mod-sku-item .price-container .price {
+    color: #ff1744;
+    font-size: 40rpx;
+}

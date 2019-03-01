@@ -1,0 +1,15 @@
+<!--pages/coupons/coupons.wxml-->
+<view class="mod-coupon-list" style="background-color:{{bgColor}}">
+  <view class="list" wx:if="{{couponList.length !== 0}}" style="background-color:{{bgColor}}">
+      <view class="coupon-list">
+        <block wx:for="{{couponList}}" wx:key="item">
+          <coupon-item coupon="{{item}}" circle-bg-color="#ebebeb"></coupon-item>
+        </block>
+      </view>
+      <view class="nomore-coupon" wx:if="{{isEnd}}">没有更多啦</view>
+  </view>
+  <view wx:else>
+    <image class="no-coupons-img" src="../../images/pics/image-no-coupons.png" alt=""></image>
+    <view class="tips">您当前没有优惠券哦~</view>
+  </view>
+</view>

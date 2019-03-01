@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "order-item": "../../widget/order-item/order-item"
+  },
+  "onReachBottomDistance": 30
+}

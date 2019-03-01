@@ -1,0 +1,72 @@
+<!--index.wxml-->
+<image src='{{gif}}' style='display:none;'></image>
+<view class="mod-home">
+  <view class="home-header">
+    <image class='icon-logo' src='../../images/pics/logo2.png'></image>
+  </view>
+  <view class="guide-wrap">
+    <navigator url="/pages/photo/photo">
+      <view class="flex-block">
+          <view class="lg-text pb10rpx">上传照片</view>
+          <view class="sm-text">体验人脸识别黑技术</view>
+        <image class="guide-img" src='../../images/pics/image-camera.png'></image>
+      </view>
+    </navigator>
+    <navigator url="/pages/shop-way/shop-way">
+      <view class="flex-block" bindtap="shopWay">
+          <view class="lg-text pb10rpx">购物方式</view>
+          <view class="sm-text">①收银台 ②扫码购</view>
+        <image class="guide-img" src='../../images/pics/image-shop.png'></image>
+      </view>
+    </navigator>
+  </view>
+  <view class="scan-wrap" wx:if="{{marketInfo.marketName}}">
+    <view class="sign-position">
+      <image class="icon-address" src="../../images/pics/icon-location-24.png"></image>
+      <text class="store-sign">{{marketInfo.marketName}}</text>
+    </view>
+    <image bindtap="scanCode" class="scan-code-icon" src='../../images/pics/icon-scan-code-shopping.png'></image>
+  </view>
+  <view class="scan-wrap" wx:else>
+    <image class="scan-code-icon" bindtap="scanMarketCode" src='../../images/pics/icon-location-shop.png'></image>
+  </view>
+</view>
+<view wx:if="{{hasPhoneNum}}" class="dialog-modal">
+    <view class="mask"></view>
+    <view class="modal-content">
+      <view class="modal-text">请点击按钮允许邻选获取您的手机号</view>
+      <button class="btn-getphone" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> 
+        获取手机号
+        </button>
+    </view>
+</view>
+<!-- wx:if="{{!hasUserInfo}}" -->
+<view class="dialog-modal" wx:if="{{!hasUserInfo}}">
+    <view class="mask"></view>
+    <view class="modal-content">
+      <view class="modal-text">请点击按钮允许邻选获取您的用户信息</view>
+      <button class="btn-getphone" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 
+        获取用户信息
+        </button>
+    </view>
+</view>
+<view wx:if="{{openDoor}}" class="dialog-modal">
+  <view class="mask"></view>
+  <view class="modal-content open-tip">
+      <image class="close" bindtap="closeTip" mode="widthFix" src='../../images/pics/icon-close.png'></image>
+      <view wx:if="{{!isClosed}}" class="tip-title">已开门，{{time}}秒后关闭</view>
+      <view wx:else class="tip-title">门已关闭</view>
+      <view class="quit-tip">若未及时进入，请微信<span class="quit-program" bindtap="logout" >重新扫码</span>
+      </view>
+  </view>
+  
+  <!-- <view wx:else class="modal-content close-tip">
+    <image class="close" bindtap="closeTip" mode="widthFix" src='../../images/pics/icon-close.png'></image>
+    <view class="tx-center text40 mb36">门已关闭</view>
+    <view class="tx-center text32 text-color-grey">若未及时进入</view>
+    <view class="tx-center text32 text-color-grey mb36">请微信再次扫描二维码</view>
+    <image class="illustration" src='../../images/pics/scan-illustration.png'></image>
+    <view class="btn-quit" bindtap="logout" >微信重新扫码</view>
+  </view> -->
+  
+</view>

@@ -1,0 +1,21 @@
+<!--widget/coupon-item/coupon-item.wxml-->
+
+
+<!-- :class="isActive ? 'active' : ''"  -->
+<view class="mod-coupon-item {{(coupon.status == 1 || coupon.status == 4) ? 'active' : ''}}">
+
+    <view class="coupon-type {{coupon.coupon_define == 1 ? 'discounts' : 'money-off'}}">{{coupon.coupon_define == 1? "优惠券": "满减券"}}</view>
+    <view class="coupon-content">
+        <view class="coupon-name">{{coupon.coupon_name || "无名称"}}</view>
+        <view class="coupon-date">有效期：{{coupon.coupon_period}}</view>
+        <view class="coupon-validate">{{coupon.market_name || "测试超市"}}</view>
+    </view>
+    <view class="half-cirle top" style="{{'background-color:'+circleBgColor}}"></view>
+    <view class="half-cirle bottom" style="{{'background-color:'+circleBgColor}}"></view>
+    <image wx:if="{{coupon.status == 2}}" src="../../images/pics/used.png" alt="" class="stamp used"></image>
+    <image wx:if="{{coupon.status == 3}}" src="../../images/pics/past-due.png" alt="" class="stamp past"></image>
+    <view class="coupon-money">
+        <view class="money"><text class="num">{{coupon.coupon_value || "100"}}</text>元</view>
+        <view class="limit">{{coupon.use_cond_name || "任意金额可用"}}</view>
+    </view>
+</view>

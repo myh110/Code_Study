@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "sku-item": "../../widget/sku-item/sku-item",
+        "coupon-item": "../../widget/coupon-item/coupon-item"
+    }
+}

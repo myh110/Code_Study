@@ -1,0 +1,11 @@
+<view class="mod-sku-item">
+    <image mode="scaleToFill" class="sku-img" src="{{innerSku.pic_url}}" alt=""></image>
+    <view class="sku-group">
+        <view class="name">{{innerSku.sku_name}}</view>
+        <view class="price-container">
+            <view class="price"> ￥{{innerSku.price || 0}}</view>
+            <input-number bindchangeNumber="changeNumber" init-num="{{innerSku.qty}}" target="{{innerSku.sku_id}}" min="1" btnDisable="{{false}}">
+            </input-number>
+        </view>
+    </view>
+</view>

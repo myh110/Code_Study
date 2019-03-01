@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<image src='{{gif}}' style='display:none;'></image>
+<view class="mod-user-center">
+
+  <!-- 头部 -->
+  <view class="header">
+      <image mode="scaleToFill" src="{{wxUserInfo.avatarUrl}}" alt="" class="head-img"></image>
+      <text class="userinfo-nickname">{{wxUserInfo.nickName}}</text>
+  </view>
+
+  <!-- 首个分级 -->
+  <view class="function-list">
+      <view class="item shadow" bindtap='goPhoto'>
+          <image mode="scaleToFill" src="../../images/pics/my-photos.png" alt="" class="icon"></image>
+          <view class="label">
+              <text class="title">我的照片</text>
+          </view>
+      </view>
+  </view>
+
+  <!-- 二次分级 -->
+  <view class="function-list bottom-list">
+      <view class="item" bindtap='goCoupons'>
+          <image mode="scaleToFill" src="../../images/pics/discount-coupon.png" alt="" class="icon"></image>
+          <view class="label">
+              <text class="title">优惠券</text>
+              <image src="../../images/pics/icon-next-page.png" alt="" class="icon-next"></image>
+          </view>
+      </view>
+      <view class="item shadow" bindtap='goOrderList'>
+          <image mode="scaleToFill" src="../../images/pics/order-history.png" alt="" class="icon"></image>
+          <view class="label his-order">
+              <text class="title">历史订单</text>
+              <image src="../../images/pics/icon-next-page.png" alt="" class="icon-next"></image>
+          </view>
+      </view>
+  </view>
+
+  <!-- 三次分级 -->
+  <view class="function-list bottom-list">
+      <view class="item shadow" bindtap='goAboutUs'>
+          <image mode="scaleToFill" src="../../images/pics/about-us.png" alt="" class="icon"></image>
+          <view class="label">
+              <text class="title">关于邻选</text>
+              <image src="../../images/pics/icon-next-page.png" alt="" class="icon-next"></image>
+          </view>
+      </view>
+  </view>
+
+  <!-- 拨打客服电话   -->
+  <view class="service">
+  客服电话：<text class="num" bindtap='phoneCall'>400-999-0328</text>
+  </view>
+
+
+</view>

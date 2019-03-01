@@ -1,0 +1,9 @@
+<!--pages/about-us/about-us.wxml-->
+<view class="mod-about-us">
+  <image class="logo-center" src="../../images/pics/image-logo-center.png"></image>
+  <view class="tips-part">
+    <view class="tips">微信公众号：邻选</view>
+    <view class="tips">客服电话：<text class="phone-number" bindtap='makePhoneCall'>400-999-0328</text></view>
+    <view class="tips workday">工作日 8:00-18:00</view>
+  </view>
+</view>

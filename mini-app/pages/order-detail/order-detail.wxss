@@ -1,0 +1,199 @@
+/* pages/order-detail/order-detail.wxss */
+
+.mod-order-detail {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	box-sizing: border-box;
+	height: 100%;
+	background-color: #ebebeb;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column
+}
+
+.mod-order-detail .order-detail {
+	padding-top: 38rpx
+}
+
+.mod-order-detail .order-detail .group {
+	position: relative;
+	box-sizing: border-box;
+	padding: 32rpx;
+	width: 670rpx;
+	background-color: #fff
+}
+
+.mod-order-detail .order-detail .group .sum-price {
+	position: relative;
+	/* margin-bottom: 3rpx; */
+	font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  
+}
+
+.mod-order-detail .order-detail .group .sum-price.last {
+	margin-bottom: 0
+}
+
+.mod-order-detail .order-detail .group .payment-inner {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 28rpx;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center
+}
+
+.mod-order-detail .order-detail .group .payment-inner .discount {
+	margin-right: 3rpx;
+	color: #9b9b9b;
+	letter-spacing: 0.8rpx;
+	font-size: 24rpx
+}
+
+.mod-order-detail .order-detail .group .payment-inner .money {
+	color: #fe583f;
+	font-size: 40rpx;
+	font-family: PingFangSC-Semibold;
+	letter-spcaing: 1rpx
+}
+
+.mod-order-detail .order-detail .group.sum {
+	margin-top: 8rpx;
+  padding: 0 32rpx;
+}
+
+.mod-order-detail .order-detail .group.sum .money {
+	color: #ff1744
+}
+
+.mod-order-detail .order-detail .group.payment,.mod-order-detail .order-detail .group.sku-list {
+	margin-top: 8rpx
+}
+
+.mod-order-detail .order-detail .group .tips {
+	position: relative;
+	word-wrap: break-word;
+	letter-spacing: 1rpx;
+	line-height: 38rpx;
+	word-break: break-all
+}
+
+.mod-order-detail .order-detail .group .date {
+	margin-bottom: 8rpx;
+	color: #2c2a27;
+	letter-spacing: 0.9rpx;
+	font-size: 28rpx
+}
+
+.mod-order-detail .order-detail .group .id {
+	color: #999;
+	font-size: 24rpx
+}
+
+.mod-order-detail .order-detail .group .good {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	overflow: hidden;
+	margin-bottom: 32rpx;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center
+}
+
+.mod-order-detail .order-detail .group .good .sku-img {
+	width: 110rpx;
+	height: 110rpx;
+	border: 0.8rpx solid #ebebeb
+}
+
+.mod-order-detail .order-detail .group .good .sku-group {
+	margin-left: 28rpx;
+  margin-top: -25rpx;
+}
+
+.mod-order-detail .order-detail .group .good .sku-name {
+	width: 342rpx;
+	height: 58rpx;
+	font-size: 28rpx
+}
+
+.mod-order-detail .order-detail .group .good .sku-qty {
+	color: #9b9b9b;
+	letter-spacing: 0.6rpx;
+	font-size: 24rpx;
+  text-align: right;
+  margin-top: 10rpx;
+}
+
+.mod-order-detail .order-detail .group .good .price {
+	margin-left: 20rpx;
+	width: 110rpx;
+	/* height: 90rpx; */
+	font-size:28rpx;
+	text-align: right
+}
+
+.mod-order-detail .order-detail .group .good:last-child {
+	margin-bottom: 0
+}
+
+.mod-order-detail .order-detail .group .right {
+	float: right
+}
+
+.mod-order-detail .order-detail .group .circle {
+	position: absolute;
+	bottom: -20rpx;
+	z-index: 30;
+	width: 34rpx;
+	height: 34rpx;
+	border-radius: 17rpx;
+	background-color: #ebebeb
+}
+
+.mod-order-detail .order-detail .group .left-circle {
+	left: -20rpx
+}
+
+.mod-order-detail .order-detail .group .right-circle {
+	right: -20rpx
+}
+
+.mod-order-detail .order-detail .group .color {
+	position: absolute;
+	top: 8rpx;
+	left: -12rpx;
+	display: block;
+	width: 8rpx;
+	height: 20rpx;
+	background-color: #f5a623
+}
+.mod-order-detail .order-detail .group .color-total {
+	position: absolute;
+	top: 32rpx;
+	left: -12rpx;
+	display: block;
+	width: 8rpx;
+	height: 20rpx;
+	background-color: #f5a623
+}

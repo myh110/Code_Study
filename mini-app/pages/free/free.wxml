@@ -1,0 +1,73 @@
+<view class="mod-free-buy gray-background">
+  <block wx:if="{{!isShowCoupon}}">
+    <view class="header">
+        <view class="shop-name">
+            <image mode="widthFix" class="icon-location" src="../../images/pics/icon-location-24.png" alt=""></image>
+            {{marketInfo.marketName}}
+        </view>
+        <view class="self-input" bindtap='showInput'>手动输入商品条码</view>
+    </view>
+
+      <view class="sku-list">
+          <block wx:for="{{skuList}}" wx:key="{{item.sku_id}}">
+              <sku-item sku="{{item}}" bindchangeNumber="changeNumber"></sku-item>
+          </block>
+    </view> 
+
+    <view class="sum-list" v-if="skuList.length !== 0">
+        <view class="sum-item">合计
+            <text>￥{{skuMoney}}</text>
+        </view>
+        <view class="sum-item">折扣
+            <text class="price">-￥{{discountMoney}}</text>
+        </view>
+        <view class="sum-item" bindtap='showCoupons'>
+            <text class="discount-part">优惠</text>
+            <text class="no-coupon" wx:if="{{couponInfo.usable_coupon_total === 0}}">无可用优惠券</text>
+            <text class="coupon-count" wx:if="{{coupon === null && couponInfo.usable_coupon_total !== 0}}">{{couponInfo.usable_coupon_total}}张可用优惠券</text>
+            <text class="price" wx:if="{{coupon !== null}}">-￥{{couponInfo.coupon_money}}</text>
+        </view>
+    </view>
+
+    <view class="sum-part">
+        <view class="sum-item">
+            <!-- <view class="discount-money">共节省￥{{savingMoney}}</view> -->
+            <view class="discount-label">实付</view>
+            <view class="price">￥{{sumMoney}}</view>
+        </view>
+    </view>
+    <view class="foot-bar">
+        <view class="add-good btn" bindtap="scanCode">继续添加</view>
+        <view class="go-pay btn" bindtap="goPay">确认支付</view>
+    </view>
+  </block>
+  <view class="coupons" circle-bg-color="#ebebeb" wx:else>
+     <view class="back-container" bindtap="goBack">
+        <!-- <image mode="widthFix" class="icon-back" src="../../images/pics/icon-return.png" alt=""></image>  -->
+        <view class="back"> 〈 返回购物车</view> 
+    </view> 
+    <view class="coupon-list">
+        <coupon-item wx:for="{{couponList}}" wx:key="{{item}}" data-coupon="{{item}}" bindtap="selectCoupon" coupon="{{item}}" circle-bg-color="#ebebeb"></coupon-item>
+    </view>
+  </view>
+
+<view class="self-input-modal" wx:if="{{isShowInput}}">
+    <view class="self-input-window">
+      <view class="self-tips">请输入商品条码</view>
+      <input bindinput="bindCodeInput" class="self-code" type="number" />
+      <view class="self-btns">
+        <view class="btn cancle" bindtap='hideInput'>取消</view>
+        <view bindtap="confirm" class="btn confirm">确认</view>
+      </view>
+    </view>
+</view>
+
+  <!-- <self-input-modal ref="selfInputModal" :on-confirm="confirmCodeInput">
+      <view slot="body" class="code-wrap form-control">
+          <p class="code-notice">
+              <label for="codeInput">请输入商品条码</label>
+          </p>
+          <input type="tel" id="codeInput" class="code-input" v-model="userInputCode">
+      </view>
+  </self-input-modal> -->
+</view>
